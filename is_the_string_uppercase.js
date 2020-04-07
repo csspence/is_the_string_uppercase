@@ -14,5 +14,13 @@ string containing no letters at all is trivially considered to be in ALL CAPS.
 */
 
 String.prototype.isUpperCase = function() {
-  // your code here
+  if(this.length === 0) {
+    return true;
+  }
+  for(let i = 0; i < this.length; i++) {
+    if(this[i].toUpperCase() !== this[i].toLowerCase() && this[i].toUpperCase() !== this[i]) {
+      return false;
+    }
+  }
+  return true;
 }
